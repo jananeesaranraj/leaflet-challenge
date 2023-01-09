@@ -52,23 +52,25 @@ function createMap(earthquakes) {
     var street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     })
-    // var street = L.tileLayer('https://{s}.tile.opensatellitemap.org/{z}/{x}/{y}.png', {
+
+    // var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
     //     attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
     // });
-
-    var topo = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-        attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
-    });
 
     var sat = L.tileLayer('http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}', {
         maxZoom: 20,
         subdomains: ['mt0', 'mt1', 'mt2', 'mt3']
     });
+
+    var grayscale = L.tileLayer.grayscale('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{
+        fadeAnimation: false
+    });
     // Create a baseMaps object.
     var baseMaps = {
-        "Street Map": street,
-        "Topographic Map": topo,
-        "Satellite": sat
+        "Street": street,
+        // "Topographic Map": topo,
+        "Satellite": sat,
+        "Grayscale": grayscale
     };
 
     // Create an overlay object to hold our overlay.
@@ -103,30 +105,4 @@ function createMap(earthquakes) {
     legend.addTo(myMap);
 }
 
-// function updateLegend(myMap) {
-
-
-
-
-
-
-
-
-
-//     var legend = L.control({ position: 'bottomright' });
-//     legend.onAdd = function (myMap) {
-
-//         var div = L.DomUtil.create('div', 'info legend');
-//         labels = ['90+', '70-90', '50-70', '30-50', '10-30', '-10-10']
-//         for (var i = 0; i < labels.length; i++) {
-//             div.innerHTML +=
-//                 labels.push(
-//                     '<i class="circle" style="background:' + chooseColor(labels[i]) + '"></i> ' +
-//                     (labels[i] ? labels[i] : '+'));
-//         }
-//         div.innerHTML = labels.join('<br>');
-//         return div;
-//     };
-//     legend.addTo(myMap);
-// }
 
