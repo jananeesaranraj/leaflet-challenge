@@ -22,6 +22,9 @@ The USGS is interested in building a new set of tools that will allow them to vi
    
    * Created a legend that will provide context for the map data.
    
+
+  ![Leaflet_Part1](https://user-images.githubusercontent.com/112193116/211363361-14a9abc9-f8e0-48de-90b6-bc162ec83dc1.png)
+   
 **Part 2: Gather and Plot More Data**
    
  Performed the following tasks:
@@ -33,5 +36,7 @@ The USGS is interested in building a new set of tools that will allow them to vi
   * Put each dataset into separate overlays that can be turned on and off independently.
 
   * Added layer controls to the map.
+  
+   ![Leaflet_Part2](https://user-images.githubusercontent.com/112193116/211363337-eab0b27e-d0f1-4ac0-8db3-c94eb7bc0368.png)
    
    
