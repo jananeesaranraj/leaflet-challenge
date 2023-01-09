@@ -1,9 +1,9 @@
 
 # leaflet-challenge
 
-leaflet-part-01---->> http://127.0.0.1:5501/Leaflet-Part-1/index.html
+leaflet-part-01---->> https://jananeesaranraj.github.io/leaflet-challenge/Leaflet-Part-1/
 
-leaflet-part-02---->> http://127.0.0.1:5501/Leaflet-Part-2/index.html
+leaflet-part-02---->>https://jananeesaranraj.github.io/leaflet-challenge/Leaflet-Part-2/
 
 **Background**
 
